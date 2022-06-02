@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/3696b8c4ec.js" crossorigin="anonymous"></script>
+  
+
+  <link rel="stylesheet" href="style/style.css">
+ 
+  <title>GymEat</title>
+</head>
+<body>
+  <section class="navBar__section">
+    <div class="navBar">
+    <a href="#queEs" class="navBar__btn">¿Qué es GymEat?</a>
+    <a href="#musica" class="navBar__btn">Motivación</a>
+    <img src="assets/imd/dieta-equilibrada.png" alt="" />
+    <a href="#descarga" class="navBar__btn">Descarga</a>
+    <a href="#footer" class="navBar__btn">Footer</a>
+  </div>
+  </section>
+
+  <section id="queEs">
+    <div id="parallax">
+      <div class="titulo">
+        <h1>¿Qué es GymEat?</h1>
+      </div>
+    </div>
+    
+    <div id="video">
+      <video id="medio" onloadedmetadata="this.muted = true" width="750px">
+        <source src="assets/video/videoCanvas.mp4" />
+      </video>
+      <div class="videoTexto">
+        <h2>GymEat es una sencilla aplicación con la que podrás anotar tus progresos
+          en el gym para así poder conseguir tus metas.
+        </h2>
+      </div>
+    </div>
+    <canvas id="lienzo"> Su navegador no soporta el elemento canvas </canvas>
+    
+    <div id="spriteSection">
+      <div id="spriteCorre"></div>
+      <div >
+          <h3>Simplifica la forma de organizar <br> tus entrenamientos para así ponerte más mamado.</h3>
+      </div>
+    </div>
+    
+    <div id="parallax2">
+      <div class="backgroundGrid"></div>
+      <div id="idea">
+        <h1>GymEat surge para cubrir la necesidad  de anotar tus progresos
+          a la hora de entrenar, con la comodidad  de hacerlo a través
+          de una única app, donde englobarás tanto las  anotaciones de los ejercicios,
+          como el control de tu dieta, además de poder  manejar el cronómetro y
+          la música
+        </h1>
+      </div>
+      <img src="assets\imd\usuario-removebg-preview.png" alt="">
+      <img src="assets\imd\creacionRutina-removebg-preview.png" alt="">
+      <img src="assets\imd\rutina-removebg-preview.png" alt="">
+    </div>
+    
+    <div id="parallax3">
+    </div>
+  </section>
+
+  <section id="musica">
+    <div class="container">
+      <div class="player">
+        <div class="player__controls">
+          <div class="player__btn player__btn--small">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <h5 class="player__title">BSO ROCKY</h5>
+          <div class="player__btn player__btn--small">
+            <i class="fa fa-bars"></i>
+            
+          </div>
+        </div>
+        <div class="player__album">
+          <img
+            src="assets/imd/kisspng-rocky-balboa-captain-ivan-drago-film-5b0de8490a24b8.2111788715276380890416.png"
+            alt=""
+            class="player__img">
+        </div>
+        <h3 class="player__song">The eye of the tiger</h3>
+        <div class="audio-duration">
+          <div class="start">00:01</div>
+          <div class="end">04:00</div>
+        </div>
+        <audio class="player__audio" controls preload="metadata" src="assets/songs/rockySong.mp3" id="audio"></audio>
+    
+        <div class="player__controls">
+          <div class="player__btn player__btn--medium" id="retroceso">
+            <i class="fa fa-backward"></i>
+          </div>
+          <div class="player__btn player__btn--medium blue" id="play">
+            <i class="fa fa-play play-btn"></i>
+            <i class="fa fa-pause pause-btn hide"></i>
+          </div>
+    
+          <div class="player__btn player__btn--medium" id="avance">
+            <i class="fa fa-forward"></i>
+          </div>
+    
+        </div>
+    
+      </div>
+    </div>
+  </section>
+
+  <hr>
+  <section id="descarga">
+    <div class="descarga__container">
+      <div class="descarga__card">
+        <img src="assets/imd/gymEatLogo2.png" alt="" class="descarga__card--img">
+        <a href="">Descarga aquí</a>
+      </div>
+        <img src="assets\imd\usuario-removebg-preview.png" class="descarga__foto" alt="">
+        <img src="assets\imd\creacionRutina-removebg-preview.png" class="descarga__foto" alt="">
+        <img src="assets\imd\rutina-removebg-preview.png" class="descarga__foto" alt="">
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="progress-container">
+      <svg class="svg1" height=600 width=600 id="Hour">
+          <circle cx="300" cy="300" r="290" stroke="#FF4961" stroke-width="20" fill="transparent" />
+      </svg>
+      <svg class="svg2" height=600 width=600 id="Hour">
+          <circle cx="300" cy="300" r="290" stroke="#FF0080" stroke-width="20" fill="transparent" />
+      </svg>
+      <h1 class="title">60%</h1>
+  </div>
+  </section>
+  
+  
+</body>
+
+<script src="js/script.js"></script>
+<!--<script src="js/audio.js"></script>-->
+</html>

@@ -1,0 +1,439 @@
+/*************Colores**********/
+*{
+    --background: #D3D5D8;
+    --gray: #797d7f;
+    --lightShadow: #FFFF;
+    --white:#FFFFFF;
+    --black:#000000;
+    --darkRed:#942926;
+    --green:#7EE0B9;
+    --darkGreen:#26996B;
+    --red:#E06A67;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+      background-color: var(--background);
+  }
+
+/*****************Barra de navegación**********************/
+@keyframes degradadoCabecera {
+    0% {
+        background-position: 0% 50%;
+    }
+  
+    50% {
+        background-position: 50% 100%;
+    }
+  
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  .navBar{
+    margin: 0;
+    top: -20px;
+    position: fixed;
+    display: flex;
+    background-color:#d3d5d8;
+    box-shadow: -8px -8px 20px 1px #fff9, 5px 5px 6px 1px #0001;
+    margin-top: 20px;
+    width: 100%;
+    height: 65px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .navBar img{
+    background: linear-gradient(90deg,#e0e5ec, grey);
+    background-size: 200% 200%;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 60px;
+    padding: 10px;
+    animation-name: degradadoCabecera;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .navBar__btn {
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: black;
+    box-shadow: -8px -8px 20px 1px #fff9, 5px 5px 6px 1px #0001;
+    border-radius: 12px;
+  }
+  
+  .navBar__btn:hover{
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    transform: scale(110%);
+    transition: 0.3s;
+    box-shadow: inset -8px -8px 20px #fff9, inset 8px 8px 20px #0003;
+  }
+  
+
+  
+  
+ /*****************Que es gymEat**********************/
+ #parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../assets/imd/victorGris.jpg');
+    min-height: 840px;   /*Que tenga una altura mínima*/
+    background-attachment: fixed; /*Background fijo*/
+    background-size: cover;
+    background-position: center;
+  }
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff,
+                 0 0 20px  #fff,
+                 0 0 30px  #fff,
+                 0 0 40px  var(--background),
+                 0 0 70px  var(--background),
+                 0 0 80px  var(--background),
+                 0 0 100px var(--background),
+                 0 0 150px var(--background);
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #fff,
+                 0 0 20px var(--gray),
+                 0 0 35px var(--gray),
+                 0 0 40px var(--gray),
+                 0 0 50px var(--gray),
+                 0 0 75px var(--gray);
+    }
+  }
+  
+  
+  .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+    background-color: rgba(#8f909110 , alpha);
+    border-radius: 12px 0px 12px 0px;
+    box-shadow: 5px 5px 6px 1px #0001;
+    margin: auto;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin: auto;
+  }
+  .titulo h1{
+    border: 3px  solid white ;
+    padding: 40px;
+    border-radius: 0 12px 0px 12px;
+    box-shadow: inset -8px -8px 20px #fff9, inset 8px 8px 20px #0003;
+  }
+  
+  @keyframes andaSrpite {
+    from{background-position: 1px 0px;}
+    to{background-position: -3000px 0px;}
+  }
+  
+  #spriteSection{
+    padding-top: 100px;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: black;
+    font-size: 1.8em;
+    background-color: #D3D5D8;
+    justify-content: space-around;
+    align-items: center;
+    height: 290px;
+  }
+  #spriteCorre{
+    background-image: url("../../assets/imd/pngwing.com.png");
+    width: 170px;
+    height: 280px;
+    animation: andaSrpite 1s steps(8) infinite ;
+    margin: 10px;
+    background-size: 1500px;
+  }
+  
+  #video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232831;
+    color: var(--black);
+    font-size: 1.5em;
+    color: white;
+  
+  }
+  
+  #parallax2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,100px);
+    grid-template-rows: repeat(12,100px);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #232831;
+    height: 700px;
+  }
+  .backgroundGrid{
+    width: 100%;
+    background-color: #D3D5D8;
+    grid-column: 1/16 ;
+    grid-row: 1;
+  }
+  #idea{
+    grid-column: 3/7;
+    grid-row: 3;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+  }
+  #parallax2 img:nth-of-type(1){
+    width: 200px;
+    grid-column: 9;
+    grid-row: 3;
+  }
+  #parallax2 img:nth-of-type(2){
+    width: 200px;
+    grid-column: 11;
+    grid-row: 1;
+  }
+  #parallax2 img:nth-of-type(3){
+    width: 200px;
+    grid-column: 13;
+    grid-row: 2;
+  }
+  
+  #parallax3{
+    background-image: url('../../assets/imd/victorGris.jpg');
+    min-height: 920px;   /*Que tenga una altura mínima*/
+    background-attachment: fixed; /*Background fijo*/
+    background-size: cover;
+    background-position: center;
+  }
+
+  /****************Musica*****************/
+  .container{
+     background-color: var(--background);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     margin-top: -100px;
+   }
+   
+   .player{
+     width: 300px;
+     height: 550px;
+     background-color: var(--background);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     border-radius: 12px;
+     box-shadow: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
+   }
+   
+   .player__controls{
+     display: flex;
+     width: 95%;
+     justify-content: space-evenly;
+     align-items: center;
+     margin-bottom: 25px;
+   }
+   
+   .player__btn{
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: -8px -8px 20px 1px #fff9, 5px 5px 6px 1px #0001;
+     color: var(--gray);
+   }
+   
+   .player__btn:active{
+     box-shadow: inset -8px -8px 20px #fff9, inset 8px 8px 20px #0003;
+   }
+   
+   .player__btn--small{
+     min-width: 50px;
+     min-height: 50px;
+   }
+   
+   .player__title{
+     font-weight: 600;
+     font-size: 0.8em;
+     color: #a1a1a1;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+   }
+   
+   .player__album{
+     width: 150px;
+   }
+   
+   .player__img{
+     width: 150px;
+     border-radius: 50%;
+     box-shadow: 2px 2px 7px rgba(163,177,198,0.5);
+   
+   }
+   
+   .player__song{
+     position: relative;
+     width: 100%;
+     text-align: center;
+     font-weight: 400;
+     font-size: 1em;
+     opacity: 0.5;
+     margin-bottom: 30px;
+   }
+   
+   .player__level{
+     width: 80%;
+     appearance: none;
+   }
+   
+   .player__level::-webkit-slider-runnable-track{
+     background-color: #d7dbdd;
+     height: 6px;
+     border: 3px;
+   }
+   .player__level::-webkit-slider-thumb{
+     -webkit-appearance: none;
+     border-radius: 100%;
+     background-color: #5c87f2;
+     height: 18px;
+     width: 18px;
+     margin-top: -5px;
+   
+   }
+   
+   .audio-duration{
+     display: flex;
+     width: 78%;
+     font-size: 10px;
+     font-weight: 600;
+     color: #a1a1a1;
+     letter-spacing: 1px;
+     margin-top: -30px;
+   }
+   
+   .start{
+     flex:1;
+   }
+   
+   
+   .player__audio{
+     visibility: hidden;
+   }
+   
+   .player__btn--medium{
+     min-height: 70px;
+     min-width: 70px;
+   }
+   .blue{
+     background-color: #5c87f2;
+     color: white;
+   }
+   
+   .hide{
+     display: none;
+   }
+
+/************************Descarga*******************/
+.descarga__container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8,100px);
+  }
+  
+  .descarga__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+    grid-column: 3/5;
+    grid-row: 2;
+    box-shadow: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
+    border-radius: 15px;
+  }
+  .descarga__card--img{
+    width: 400px;
+  }
+  
+  .descarga__foto:nth-of-type(1){
+    width: 200px;
+    grid-column: 6;
+    grid-row: 2;
+  }
+  .descarga__foto:nth-of-type(2){
+    width: 200px;
+    grid-column: 8;
+    grid-row: 4;
+  }
+  .descarga__foto:nth-of-type(3){
+    width: 200px;
+    grid-column: 7;
+    grid-row: 3;
+  }
+
+  /****************Footer****/
+  .progress-container{
+    width: 650px;
+    height: 750px;
+    margin: 70px 0px 0px 30%;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+    background-color: var(--background);
+    position: relative;
+}
+
+.svg1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    stroke-linecap: round;
+    stroke-dasharray: 1150;    
+}
+.svg2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    stroke-linecap: round;
+    stroke-dasharray: 1860; 
+    color: #26996B;   
+    opacity: 0.1;
+}
+
+.title{
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
